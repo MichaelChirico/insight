@@ -87,7 +87,7 @@ test_that("get_df", {
     tolerance = 1e-4
   )
 
-  skip_if_not_installed("lmerTest")
+  skip_if_not_installed("lmerTest", "3.2-1")
   # per observation df
   data(mtcars)
   mod <- lme4::lmer(am ~ hp + (1 | cyl), data = mtcars)
